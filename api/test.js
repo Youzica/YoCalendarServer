@@ -6,7 +6,7 @@ const axios = require('axios')
 
 let resObj = {
     touser: "",
-    template_id: "ZYzF7z5fuRd5DwBncMyAoPUYXl-T62gTO3wYMLMeS4E",
+    template_id: "模板ID填写位置",
     lang: "zh-CN",
     data: {
         thing3: {
@@ -92,7 +92,7 @@ router.post('/postCode', (req, res) => {
 
 // 下发订阅消息  弃用--->转用定时任务获取数据下发
 router.get('/sendMsg', (req, res) => {
-    const sqlStr = 'select openid,access_token from params where appid = "wxdad78b793ffc1d03"'
+    const sqlStr = 'select openid,access_token from params where appid = "APPID填写位置"'
     // 获取openid token
     db.query(sqlStr, (err, results) => {
         if (err)
