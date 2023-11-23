@@ -5,7 +5,7 @@ const axios = require('axios')
 // 定义接口默认参数
 let resObj = {
     touser: "",
-    template_id: "ZYzF7z5fuRd5DwBncMyAoPUYXl-T62gTO3wYMLMeS4E",
+    template_id: "模板ID填写位置",
     lang: "zh-CN",
     data: {
         thing3: {
@@ -39,7 +39,7 @@ const intervalObj = {
                     if (utils.getSubDate(itemDate) < 180) {
                         // 剩余时间小于3分钟 下发提醒任务
                         // 获取openid和token
-                        const getTokenSql = 'select openid,access_token from params where appid = "wxdad78b793ffc1d03"'
+                        const getTokenSql = 'select openid,access_token from params where appid = "APPID填写位置"'
                         db.query(getTokenSql, (err, idresult) => {
                             if (err) return console.log(err.message);
                             const url = 'https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=' + idresult[0].access_token
